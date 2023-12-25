@@ -61,7 +61,7 @@ const Body = () => {
 
       <div className="flex flex-wrap mt-10 justify-center min-h-screen">
         {filteredData.map((brewery) => (
-          <Link key={brewery.id}>
+          <Link to={"/brewery/" + brewery.id} key={brewery.id}>
             <BreweryCard resObj={brewery} />
           </Link>
         ))}

@@ -7,11 +7,12 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import BrewerySingle from "./components/BrewerySingle";
 
 const AppComponent = () => {
   return (
     <div>
-      <Header />  
+      <Header />
       <Outlet />
       <Footer />
     </div>
@@ -26,6 +27,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
+      },
+      {
+        path: "/brewery/:id",
+        element: <BrewerySingle />,
       },
       {
         path: "/about",
